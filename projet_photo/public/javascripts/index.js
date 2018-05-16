@@ -12,6 +12,26 @@ $( document ).ready(function() {
       }
     });
 
+    $('button').on('click', function (e) {
+      e.preventDefault();
+      console.log('click');
+      var avis = $(this).data('avis');
+      var photo_id = $('#photo_id').val();
+      var pseudo = $('#pseudo').val();
+      $.ajax({
+        url: "/send",
+        method: "POST",
+        data: {
+          avis: avis,
+          photo_id: photo_id,
+          pseudo: pseudo
+        },
+        success: function(data){
+          console.log(data);
+          nextImage();
+        }
+      });
+    });
 
 });
 

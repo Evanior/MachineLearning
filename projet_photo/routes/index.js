@@ -44,13 +44,26 @@ inputStream
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //console.log(images);
-  res.render('index', { title: 'Index', images: images });
+  res.render('index', { title: 'Index'});
 });
 
 router.get('/photo', function(req, res, next){
-  console.log(images);
   res.json(images);
+});
+
+router.post('/send', function (req, res, next){
+  console.log(req.body);
+  var pseudo = req.body.pseudo;
+  var avis = req.body.avis;
+  var photo_id = req.body.photo_id;
+  fs.appendFile("data_photo.csv", pseudo+","+photo_id+","+avis+"\n", function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+});
+  res.send(req.body);
 });
 
 module.exports = router;
