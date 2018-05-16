@@ -8,6 +8,11 @@ var app = require('../app');
 var debug = require('debug')('projet-photo:server');
 var http = require('http');
 require('express-async-await')(app)
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 /**
  * Get port from environment and store in Express.

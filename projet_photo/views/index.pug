@@ -13,11 +13,11 @@ block content
           .form-group
             label(for="pseudo") Pseudonyme
             input(name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
-            input(type="hidden" name=photo_id id=photo_id)
+            input(type="hidden" name="photo_id" id="photo_id")
             input(type="hidden" name="avis" id="avis")
-            button(type="submit" class="btn btn-outline-danger" id="dislike")
+            button(type="button" class="btn btn-outline-danger" data-avis="dislike")
               a(href='#')
                 i.far.fa-thumbs-down(aria-hidden='true')
-            button(type="submit" class="btn btn-outline-success" id="like")
+            button(type="button" class="btn btn-outline-success" data-avis="like")
               a(href='#')
                 i.far.fa-thumbs-up(aria-hidden='true')
