@@ -3,7 +3,9 @@
   "description": "",
   "main": "app.js",
   "authors": [
-    "Huard Timothée"
+    "Huard Timothée",
+    "Ferron Dimitri",
+    "Chateau Corentin"
   ],
   "license": "ISC",
   "homepage": "",
