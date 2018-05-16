@@ -44,7 +44,7 @@ inputStream
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Index'});
+  res.render('index', { title: 'Machine Learning'});
 });
 
 router.get('/photo', function(req, res, next){
