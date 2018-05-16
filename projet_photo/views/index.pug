@@ -5,21 +5,16 @@ block content
   .container
     #carouselExampleControls.carousel.slide(data-ride='carousel')
       .carousel-inner
-        .carousel-item
-          img.d-block.w-100(src="https://picsum.photos/1900/1080?image=0")
-        .carousel-item.active
-          img.d-block.w-100(src="https://picsum.photos/1900/1080?image=1")
-        .carousel-item
-          img.d-block.w-100(src="https://picsum.photos/1900/1080?image=2")
+        
 
       .row.justify-content-center
-          form
-            .form-group
-              label(for="pseudo") Pseudonyme
-              input(type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
-              button(type="submit" class="btn btn-outline-danger")
-                a(href='#')
-                  i.far.fa-thumbs-down(aria-hidden='true')
-              button(type="submit" class="btn btn-outline-success")
-                a(href='#')
-                  i.far.fa-thumbs-up(aria-hidden='true')
+        form
+          .form-group
+            label(for="pseudo") Pseudonyme
+            input(type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
+            button(type="submit" class="btn btn-outline-danger")
+              a(href='#')
+                i.far.fa-thumbs-down(aria-hidden='true')
+            button(type="submit" class="btn btn-outline-success")
+              a(href='#')
+                i.far.fa-thumbs-up(aria-hidden='true')

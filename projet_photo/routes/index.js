@@ -10,7 +10,7 @@ var fs = require('fs');
 var CsvReadableStream = require('csv-reader');
 
 var inputStream = fs.createReadStream('db_photo_urls.csv', 'utf8');
-var images = {images:[]};
+var images = {};
 
 inputStream
   .pipe(CsvReadableStream({ parseNumbers: true, parseBooleans: true, trim: true }))
@@ -36,7 +36,7 @@ inputStream
         client.close();
       }
     });*/
-    images.images[row[0]] = row[1];
+    images[row[1]] = row[2];
   })
   .on('end', function (data) {
     console.log('No more rows!');
