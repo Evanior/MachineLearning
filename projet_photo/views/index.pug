@@ -5,16 +5,18 @@ block content
   .container
     #carouselExampleControls.carousel.slide(data-ride='carousel')
       .carousel-inner
-        
+
 
       .row.justify-content-center
-        form
+        form(method='POST' action='/send' id=from)
           .form-group
             label(for="pseudo") Pseudonyme
-            input(type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
-            button(type="submit" class="btn btn-outline-danger")
+            input(name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
+            input(type="hidden" name=photo_id id=photo_id)
+            input(type="hidden" name="avis" id="avis")
+            button(type="submit" class="btn btn-outline-danger" id="dislike")
               a(href='#')
                 i.far.fa-thumbs-down(aria-hidden='true')
-            button(type="submit" class="btn btn-outline-success")
+            button(type="submit" class="btn btn-outline-success" id="like")
               a(href='#')
                 i.far.fa-thumbs-up(aria-hidden='true')
