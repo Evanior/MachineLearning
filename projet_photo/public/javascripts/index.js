@@ -28,7 +28,12 @@ $( document ).ready(function() {
         },
         success: function(data){
           console.log(data);
-          nextImage();
+          if(data != "error"){
+            nextImage();
+          }else {
+            alert("Un pseudo STP")
+          }
+
         }
       });
     });
@@ -50,5 +55,6 @@ function pickRandomImage(){
   var obj_keys = Object.keys(allImage);
   var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
   image = allImage[ran_key];
+  delete allImage[ran_key];
   return {key:ran_key, url: image};
 }
