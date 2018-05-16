@@ -2,22 +2,28 @@ extends layout
 
 block content
 
+
+  nav.navbar.bg-dark.navbar-dark
+    span.navbar-brand.mb-0.h1 Projet Photo | Machine Learning
+
   .container
     #carouselExampleControls.carousel.slide(data-ride='carousel')
-      .carousel-inner
-        .carousel-item
-          img.d-block.w-50(src="https://picsum.photos/1900/1080?image=0")
-
       .row.justify-content-center
         form(method='POST' action='/send' id=from)
           .form-group
-            label(for="pseudo") Pseudonyme
+            h1.center
+              label(for="pseudo") Pseudonyme
             input(name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
             input(type="hidden" name="photo_id" id="photo_id")
             input(type="hidden" name="avis" id="avis")
-            button(type="button" class="btn btn-outline-danger" data-avis="dislike")
-              a(href='#')
-                i.far.fa-thumbs-down(aria-hidden='true')
-            button(type="button" class="btn btn-outline-success" data-avis="like")
-              a(href='#')
-                i.far.fa-thumbs-up(aria-hidden='true')
+            p.justify-content-center.center
+              button(type="button" class="btn btn-outline-danger" data-avis="dislike")
+                a(href='#')
+                  i.far.fa-thumbs-down(aria-hidden='true')
+              button(type="button" class="btn btn-outline-success" data-avis="like")
+                a(href='#')
+                  i.far.fa-thumbs-up(aria-hidden='true')
+
+      .carousel-inner
+        .carousel-item
+          img.d-block.w-50(src="https://picsum.photos/1900/1080?image=0")
