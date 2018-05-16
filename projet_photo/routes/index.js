@@ -56,7 +56,7 @@ router.post('/send', function (req, res, next){
   var pseudo = req.body.pseudo;
   var avis = req.body.avis;
   var photo_id = req.body.photo_id;
-  fs.appendFile("data_photo.csv", pseudo+","+photo_id+","+avis+"\n", function(err) {
+  fs.appendFile("data_photo.csv", pseudo+","+photo_id+","+avis+","+new Date().toJSON()+"\n", function(err) {
     if(err) {
         return console.log(err);
     }
