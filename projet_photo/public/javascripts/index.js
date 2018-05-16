@@ -16,12 +16,19 @@ $( document ).ready(function() {
 });
 
 function nextImage(){
-  pickRandomImage();
+  $('.carousel-item').removeClass('active');
+  image = pickRandomImage();
+  console.log(image);
+  url = image.url;
+  key = image.key;
+  $('.carousel-item img').attr('src', url);
+  $('#photo_id').val(image.key);
+  $('.carousel-item').addClass('active');
 }
 
 function pickRandomImage(){
   var obj_keys = Object.keys(allImage);
   var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
   image = allImage[ran_key];
-  console.log(image);
+  return {key:ran_key, url: image};
 }
