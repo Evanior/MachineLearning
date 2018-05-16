@@ -7,9 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('projet-photo:server');
 var http = require('http');
-
-var mongodb = require('mongodb');
-var urlMongo = "mongodb://127.0.0.1:27017/";
+require('express-async-await')(app)
 
 /**
  * Get port from environment and store in Express.

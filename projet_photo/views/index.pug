@@ -3,3 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  - console.log(images['ff6e416c1cbc34f6ff796532fdf5df25'])
+  each val, index in images
+    p= index
+    p= val
