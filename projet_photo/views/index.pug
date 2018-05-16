@@ -11,11 +11,17 @@ block content
           img.d-block.w-100(src="https://picsum.photos/1900/1080?image=1")
         .carousel-item
           img.d-block.w-100(src="https://picsum.photos/1900/1080?image=2")
-            
-      a.carousel-control-prev(href='#carouselExampleControls', role="button", data-slide="prev")
-        span.carousel-control-prev-icon(aria-hidden="true")
-        span.sr-only Previous
-        
-      a.carousel-control-next(href="#carouselExampleControls", role="button", data-slide="next")
-        span.carousel-control-next-icon(aria-hidden="true")
-        span.sr-only Next
+
+      .row.justify-content-center
+          form
+            .form-group
+              label(for="pseudo") Pseudonyme
+              input(type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
+              button(type="submit" class="btn btn-outline-danger")
+                a(href='#')
+                  i.far.fa-thumbs-down(aria-hidden='true')
+              button(type="submit" class="btn btn-outline-success")
+                a(href='#')
+                  i.far.fa-thumbs-up(aria-hidden='true')
+
+
