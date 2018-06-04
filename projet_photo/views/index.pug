@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  nav.navbar.bg-dark.navbar-dark
+    span.navbar-brand.mb-0.h1 Projet Photo | Machine Learning
+    span.pull-right.text-white Version Pré-Alpha
+
+  .container
+    #carouselExampleControls.carousel.slide(data-ride='carousel')
+      .row.justify-content-center
+        form(method='POST' action='/send' id=from)
+          .form-group
+            h1.center
+              label(for="pseudo") Pseudonyme
+            input(style="margin-bottom: 5px;" name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Entrer Pseudo")
+            input(type="hidden" name="photo_id" id="photo_id")
+            input(type="hidden" name="avis" id="avis")
+            p.justify-content-center.center
+              button(type="button" class="btn btn-danger" data-avis="dislike")
+                a(href='#')
+                  i.far.fa-thumbs-down.text-white(aria-hidden='true')
+              button(type="button" class="btn btn-success" data-avis="like")
+                a(href='#')
+                  i.far.fa-thumbs-up.text-white(aria-hidden='true')
+      .row
+        .carousel-inner
+          .carousel-item
+            img.d-block(src="https://picsum.photos/1900/1080?image=0")
+
+      .row.justify-content-center
+        p Notez la qualité photographique de la photo ci-dessus.

@@ -1,0 +1,23 @@
+{
+  "name": "projet_photo",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Huard Timothée",
+    "Ferron Dimitri",
+    "Chateau Corentin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1"
+  }
+}
